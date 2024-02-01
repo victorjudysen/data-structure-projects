@@ -18,16 +18,16 @@ struct Node {
 typedef Node* nodePtr;
 
 //function prototypes
-void addAfterTenth(Node* head, store newItem); //declares a function named addAfterTenth that adds a new node(item) after the tenth one.
-void deleteSeventh(Node* head); //a function that deletes the seventh node(item) from the list.
+void addAfterTenth(nodePtr head, store newItem); //declares a function named addAfterTenth that adds a new node(item) after the tenth one.
+void deleteSeventh(nodePtr head); //a function that deletes the seventh node(item) from the list.
 
 //function definitions
-void addAfterTenth(Node* head, store newItem){
+void addAfterTenth(nodePtr head, store newItem){
     nodePtr current = head; //start at the head of the list
     int count = 0; // this is a counter to track the 10th node
 
     //Traverse to the 10th node
-    while(current != NULL && count < 9) { // count up to 9 to reach the 10th node
+    while(current != NULL && count < 10) { // count up to 10 to reach the 10th node
         current = current->next; // moves to the next node
         count++; // increments the counter
     }
@@ -44,7 +44,7 @@ void addAfterTenth(Node* head, store newItem){
     }
 }
 
-void deleteSeventh(Node* head) {
+void deleteSeventh(nodePtr head) {
     // Initialize pointers:
     // - current: pointer to the current node being traversed
     // - prev: pointer to the node before the current node
@@ -112,7 +112,7 @@ int main(){
     }
 
     // call the functions to add and delete items
-    store newItem = {"Ubwabwa", 123};
+    store newItem = {"Ubwabwa"};
     addAfterTenth(head, newItem);
     deleteSeventh(head);
 
