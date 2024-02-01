@@ -4,10 +4,6 @@
 #include <iostream>
 using namespace std;
 
-//function prototypes
-void addAfterTenth(Node* head, store newItem); //declares a function named addAfterTenth that adds a new node(item) after the tenth one.
-void deleteSeventh(Node* head); //a function that deletes the seventh node(item) from the list.
-
 struct store {
     string name;
     char id;
@@ -20,6 +16,10 @@ struct Node {
 };
 
 typedef Node* nodePtr;
+
+//function prototypes
+void addAfterTenth(Node* head, store newItem); //declares a function named addAfterTenth that adds a new node(item) after the tenth one.
+void deleteSeventh(Node* head); //a function that deletes the seventh node(item) from the list.
 
 //function definitions
 void addAfterTenth(Node* head, store newItem){
@@ -79,7 +79,6 @@ void deleteSeventh(Node* head) {
     }
 }
 
-
 int main(){
     nodePtr head = NULL; //start with an empty list + initializes a head pointer to an empty list
 
@@ -112,6 +111,11 @@ int main(){
         current = current->next; //move to the next node
     }
 
+    // call the functions to add and delete items
+    store newItem = {"Ubwabwa", 123};
+    addAfterTenth(head, newItem);
+    deleteSeventh(head);
+
     //Remember to deallocate memory for each node -- to avoid memory leaks
     nodePtr temp; //declares a temporary pointer 'temp' to assist in node removal
     while (head != NULL) { 
@@ -122,4 +126,3 @@ int main(){
     // note: dynamically allocated memory using 'new' must be manually deallocated using 'delete' to avoid memory leaks
     return 0;
 }
-
