@@ -1,8 +1,12 @@
 // Referencing from the original file: store-linked-list.cpp
-// Required to add one item after the 10th item
+// Required to add one item after the 10th item and delete the 7th item
 
 #include <iostream>
 using namespace std;
+
+//function prototypes
+void addAfterTenth(Node* head, store newItem); //declares a function named addAfterTenth that adds a new node(item) after the tenth one.
+void deleteSeventh(Node* head); //a function that deletes the seventh node(item) from the list.
 
 struct store {
     string name;
@@ -16,6 +20,38 @@ struct Node {
 };
 
 typedef Node* nodePtr;
+
+//function definitions
+void addAfterTenth(Node* head, store eleventhNode){
+    nodePtr current = head; //start at the head of the list
+    int count = 0; // this is a counter to track the 10th node
+
+    //Traverse to the 10th node
+    while(current != NULL && count < 9) { // count up to 9 to reach the 10th node
+        current = current->next; // moves to the next node
+        count++; // increments the counter
+    }
+
+    // In case the 10th node exists
+    if(current != NULL) {
+        nodePtr anotherNode = new Node; // creates a new node to insert
+        anotherNode->item = newItem; // assigns the new item's data to the new node
+        anotherNode->next = current->next; // links the new node's next pointer to the 11th node
+        current->next = anotherNode; // links the 10th node's next pointer to the new node
+    } else {
+        // handle the case where the list has less than 10 items.
+        cout << "List has less than 10 items." << endl;
+    }
+
+
+
+
+}
+
+void deleteSeventh(Node* head) {
+
+}
+
 
 int main(){
     nodePtr head = NULL; //start with an empty list + initializes a head pointer to an empty list
