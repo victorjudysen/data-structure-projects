@@ -7,7 +7,7 @@ struct Node
     Node *link;
 };
 
-typedef Node* nodePtr;
+typedef Node* nodePtr; //creates an alias of the node pointer in order to avoid reusing node* over and over again.
 
 int main() 
 {
