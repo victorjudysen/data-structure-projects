@@ -45,26 +45,36 @@ void addAfterTenth(Node* head, store newItem){
 }
 
 void deleteSeventh(Node* head) {
-    nodePtr current = head;
-    nodePtr prev = NULL;
-    int count = 0;
+    // Initialize pointers:
+    // - current: pointer to the current node being traversed
+    // - prev: pointer to the node before the current node
+    // - count: counter to track the position of the current node
+
+    nodePtr current = head; // start at the head of the list
+    nodePtr prev = NULL; // keep track of the previous node
+    int count = 0; // counter to track the 7th node
 
     // Traverse to the 7th node (or stop if the list is shorter)
     while(current != NULL && count < 7) {
-        prev = current;
-        current = current->next;
-        count++;
+        prev = current; // update the previous node pointer to point to the current node.
+        current = current->next; // move the current node pointer to the next node in the list.
+        count++; // increment the counter to track the position
     }
 
     // Incase the 7th node exists
     if(current != NULL) {
+        // special case: deleting the head node
         if (prev == NULL) {
+            // update the head pointer to point to the second node:
             head = current->next;
         } else {
+            // bypass the 7th node by linking the previous node to the node after it.
             prev->next = current->next;
         }
+        // deallocate the memory of the deleted node:
         delete current;
     }   else {
+        // handle the case where the list has less than 7 items:
         cout << "List has less than 7 items." << endl;
     }
 }
