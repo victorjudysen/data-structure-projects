@@ -22,7 +22,7 @@ struct Node {
 typedef Node* nodePtr;
 
 //function definitions
-void addAfterTenth(Node* head, store eleventhNode){
+void addAfterTenth(Node* head, store newItem){
     nodePtr current = head; //start at the head of the list
     int count = 0; // this is a counter to track the 10th node
 
