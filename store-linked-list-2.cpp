@@ -42,14 +42,31 @@ void addAfterTenth(Node* head, store eleventhNode){
         // handle the case where the list has less than 10 items.
         cout << "List has less than 10 items." << endl;
     }
-
-
-
-
 }
 
 void deleteSeventh(Node* head) {
+    nodePtr current = head;
+    nodePtr prev = NULL;
+    int count = 0;
 
+    // Traverse to the 7th node (or stop if the list is shorter)
+    while(current != NULL && count < 7) {
+        prev = current;
+        current = current->next;
+        count++;
+    }
+
+    // Incase the 7th node exists
+    if(current != NULL) {
+        if (prev == NULL) {
+            head = current->next;
+        } else {
+            prev->next = current->next;
+        }
+        delete current;
+    }   else {
+        cout << "List has less than 7 items." << endl;
+    }
 }
 
 
