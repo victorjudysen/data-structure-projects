@@ -17,7 +17,7 @@ typedef Node* nodePtr;
 int main(){
     nodePtr head = NULL; //start with an empty list + initializes a head pointer to an empty list
 
-    for (int i=0; i<4; i++) {
+    for (int i=0; i<15; i++) {
         nodePtr newNode = new Node; //create a new node for each item if the loop is looping(if the condition is true)
 
         cout << "Enter details for item " << i+1 << ":" << endl;
