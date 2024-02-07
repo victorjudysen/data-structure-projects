@@ -29,7 +29,7 @@ int main()
     thirdNode -> data = 40; // Assign the value 40 to the data member of the third node
     thirdNode -> link = NULL; // Set the link member to NULL, indicating the end of the list
 
-    // 5. (Optional) Print the node's data to verify
+    // 5. Print the node's data to verify
     cout << "Data in head node: " << head -> data << endl;
     cout << "Link of second node: " << head -> link << endl;
     cout << endl;
