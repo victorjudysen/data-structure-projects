@@ -16,7 +16,7 @@ typedef Item* itemptr;
 int main()
 {
     Item* head = nullptr;
-    for(int i=0; i<12; i++)
+    for(int i=0; i<4; i++)
     {
         itemptr newItem = new Item;
         cout << "Item ID: ";
@@ -41,9 +41,9 @@ int main()
         current = current->next;
     }
 
-    // Traverse to the 10th item
+    // Traverse to the 3rd item
     current = head;
-    for (int i = 0; i < 9 && current != nullptr; i++) {
+    for (int i = 0; i < 2 && current != nullptr; i++) {
         current = current->next;
     }
 
