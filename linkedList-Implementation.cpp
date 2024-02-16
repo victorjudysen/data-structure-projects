@@ -1,5 +1,5 @@
 // C++ program for linked list implementation of stack
-#include <bitset>/stdc++.h>
+#include <bitset/stdc++.h>
 #include <iostream>
 using namespace std;
 
