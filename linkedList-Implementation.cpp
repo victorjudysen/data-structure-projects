@@ -1,5 +1,4 @@
 // C++ program for linked list implementation of stack
-#include <bits/stdc++.h>
 #include <iostream>
 using namespace std;
 
