@@ -29,7 +29,8 @@ int main()
     cout << "Recorded items: " << endl;
     for(int i=0; i<4; i++)
     {
-        cout << "Item " << i+1 ;   
+        cout << "Item " << i+1 << ": ";   
+        cout << "ID: " << items[i].itemID << ", Name: " << items[i].itemName << ", Quantity: " << items[i].itemQuantity << endl;   
     }
 
     return 0;
