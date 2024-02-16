@@ -29,7 +29,7 @@ int main()
     cout << "Recorded items: " << endl;
     for(int i=0; i<4; i++)
     {
-        cout << "Item " << i+1;   
+        cout << "Item " << i+1 ;   
     }
 
     return 0;
