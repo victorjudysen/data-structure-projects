@@ -12,9 +12,9 @@ struct Item
 
 int main()
 {
-    Item items[20];
+    Item items[4];
     
-    for(int i=0; i<20; i++)
+    for(int i=0; i<4; i++)
     {
         cout << "Item ID: ";
         cin >> items[i].itemID;
@@ -27,7 +27,7 @@ int main()
     }
 
     cout << "Recorded items: " << endl;
-    for(int i=0; i<20; i++)
+    for(int i=0; i<4; i++)
     {
         cout << "Item " << i+1;   
     }
