@@ -1,3 +1,5 @@
+/*original code implementation involved adding an item after the 10th item, but due to output presentation, I have added an item after the 3rd item*/
+
 #include <iostream>
 using namespace std;
 
