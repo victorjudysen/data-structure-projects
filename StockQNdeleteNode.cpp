@@ -52,7 +52,7 @@ int main()
         delete temp; // Free memory of the 3rd item
     }
 
-    cout << "Recorded Items after deleting the 3rd item: \n";
+    cout << "\nRecorded Items after deleting the 3rd item: \n";
     current = head;
     while (current != nullptr)
     {
