@@ -4,7 +4,7 @@ using namespace std;
 //bubble sort function for ascending order
 void bs_Ascend(int a[], int n)
 {
-    for (int i=0; i < n-1; ++1)
+    for (int i=0; i < n-1; ++i)
     {
         for (int j=0; j < n - i - 1; ++j)
         {
@@ -18,7 +18,7 @@ void bs_Ascend(int a[], int n)
 //bubble sort function for descending order
 void bs_Descend(int a[], int n)
 {
-    for (int i=0; i < n-1; ++1)
+    for (int i=0; i < n-1; ++i)
     {
         for (int j=0; j < n-i-1; ++j)
         {
@@ -33,7 +33,7 @@ void bs_Descend(int a[], int n)
 //printing array
 void printout(int a[], int n)
 {
-    for(int i=0; i < n; ++1)
+    for(int i=0; i < n; ++i)
     {
         cout << a[i] << " ";
     }
