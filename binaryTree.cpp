@@ -8,9 +8,11 @@ struct TreeNode {
     TreeNode* right;    // Pointer to the right child node
 };
 
+typedef TreeNode* treenode;
+
 // Function to create a new node with the given value
-TreeNode* createNode(int val) {
-    TreeNode* newNode = new TreeNode;   // Allocate memory for the new node
+treenode createNode(int val) {
+    treenode newNode = new TreeNode;   // Allocate memory for the new node
     newNode->data = val;                // Assign the value to the new node
     newNode->left = nullptr;            // Initialize the left child pointer to nullptr
     newNode->right = nullptr;           // Initialize the right child pointer to nullptr
@@ -18,7 +20,7 @@ TreeNode* createNode(int val) {
 }
 
 // Function to recursively insert a value into the binary tree
-TreeNode* insertRecursive(TreeNode* root, int val) {
+treenode insertRecursive(TreeNode* root, int val) {
     // Base case: if the current root is nullptr, create a new node with the value
     if (root == nullptr) {
         return createNode(val);
@@ -37,7 +39,7 @@ TreeNode* insertRecursive(TreeNode* root, int val) {
 }
 
 // Function to perform an inorder traversal of the binary tree
-void inorderTraversal(TreeNode* root) {
+void inorderTraversal(treenode root) {
     // Base case: if the root is nullptr, return
     if (root != nullptr) {
         // Traverse the left subtree
@@ -51,7 +53,7 @@ void inorderTraversal(TreeNode* root) {
 
 // Main function
 int main() {
-    TreeNode* root = nullptr;   // Initialize the root pointer to nullptr
+    treenode root = nullptr;   // Initialize the root pointer to nullptr
 
     // Insert elements into the binary tree
     root = insertRecursive(root, 5);
