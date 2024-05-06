@@ -11,6 +11,8 @@ void hoursIntoMins(int hours) {
 
     newHours = hours * 60;
     totalMinutes = newHours + oldMinutes;
+
+    cout << "New Minutes are: " << totalMinutes<< endl;
 }
 
 int main() {
@@ -26,5 +28,7 @@ int main() {
 
     // call the function to convert the inputted hours into minutes
     hoursIntoMins(hours);
+
+    return 0;
 
 }
