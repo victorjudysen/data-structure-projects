@@ -17,13 +17,13 @@ void hoursIntoMins(int hours) {
 
 int main() {
 
-    cout << "Enter the number of hours: ";
+    cout << "Enter the number of hours spent outdoors: ";
     cin >> hours;
     
-    cout << "Enter the number of minutes: ";
+    cout << "Enter the number of minutes spent outdoors: ";
     cin >> oldMinutes;
     
-    cout << "Enter the number of seconds: ";
+    cout << "Enter the number of seconds spent outdoors: ";
     cin >> seconds;
 
     // call the function to convert the inputted hours into minutes
