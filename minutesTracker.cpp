@@ -1,14 +1,19 @@
 #include <iostream>
 using namespace std;
 
-int calculateValues() {
+int hours;
+int oldMinutes;
+int seconds;
 
+void hoursIntoMins(int hours) {
+    int newHours;
+    int totalMinutes;
+
+    newHours = hours * 60;
+    totalMinutes = newHours + oldMinutes;
 }
 
 int main() {
-    int hours;
-    int oldMinutes;
-    int seconds;
 
     cout << "Enter the number of hours: ";
     cin >> hours;
@@ -19,6 +24,7 @@ int main() {
     cout << "Enter the number of seconds: ";
     cin >> seconds;
 
-
+    // call the function to convert the inputted hours into minutes
+    hoursIntoMins(hours);
 
 }
