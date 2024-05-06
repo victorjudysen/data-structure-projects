@@ -12,7 +12,7 @@ void hoursIntoMins(int hours) {
     newHours = hours * 60;
     totalMinutes = newHours + oldMinutes;
 
-    cout << "New Minutes are: " << totalMinutes<< endl;
+    cout << "Total minutes are: " << totalMinutes << "." << seconds << endl;
 }
 
 int main() {
@@ -30,5 +30,4 @@ int main() {
     hoursIntoMins(hours);
 
     return 0;
-
 }
