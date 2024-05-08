@@ -5,6 +5,7 @@ int hours;
 int oldMinutes;
 int seconds;
 
+// function to convert hours into minutes and provide output 
 void hoursIntoMins(int hours) {
     int newHours;
     int totalMinutes;
