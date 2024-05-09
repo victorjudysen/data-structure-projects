@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// global variables for the entire program
 int hours;
 int oldMinutes;
 int seconds;
