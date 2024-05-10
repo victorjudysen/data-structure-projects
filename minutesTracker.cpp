@@ -8,11 +8,11 @@ int seconds;
 
 // function to convert hours into minutes and provide output 
 void hoursIntoMins(int hours) {
-    int newHours;
+    int recordedHours;
     int totalMinutes;
 
-    newHours = hours * 60;
-    totalMinutes = newHours + oldMinutes;
+    recordedHours = hours * 60;
+    totalMinutes = recordedHours + oldMinutes;
 
     cout << "Total minutes spent outdoors: " << totalMinutes << "." << seconds << endl;
 }
